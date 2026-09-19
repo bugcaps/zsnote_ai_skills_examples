@@ -1,0 +1,10 @@
+{
+  "pricing.hero.title": "플로우노트로 흩어진 메모를 한곳에 모으세요",
+  "pricing.hero.subtitle": "{plan_count}개 요금제 중에서 고르고, 14일 무료 체험을 먼저 써 보세요.",
+  "pricing.card.pro.name": "FlowNote Pro",
+  "pricing.card.pro.desc": "스마트 정리 기능과 작업 공간 5개를 제공합니다.",
+  "pricing.card.team.desc": "FlowNote Team은 팀 관리자가 결제 주기를 한 번에 관리합니다.",
+  "pricing.cta.trial": "{{user_name}}님, 무료 체험 시작하기",
+  "pricing.footer.note": "자세한 내용은 https://www.example.com/pricing?utm_source=newsletter 에서 확인하세요.",
+  "pricing.footer.contact": "문의: support@example.com"
+}

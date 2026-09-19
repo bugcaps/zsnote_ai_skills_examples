@@ -1,0 +1,26 @@
+# 팀에서 검증한 Node.js CI 템플릿.
+# 액션의 메이저 버전은 이 파일에서만 관리합니다. 올릴 때는 이 파일을 고치세요.
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20 # .nvmrc가 있으면 node-version-file: .nvmrc 로 교체
+          cache: npm
+      - run: npm ci
+      - run: npm run lint # package.json에 lint가 없으면 이 줄을 삭제
+      - run: npm test

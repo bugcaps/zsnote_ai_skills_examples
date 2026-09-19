@@ -1,0 +1,18 @@
+{
+  "locales": ["en", "ja"],
+  "placeholder_patterns": ["\\{\\{[^{}]+\\}\\}", "\\{[^{}]+\\}"],
+  "do_not_translate": [
+    "FlowNote",
+    "FlowNote Pro",
+    "FlowNote Team",
+    "example.com"
+  ],
+  "glossary": [
+    { "source": "플로우노트", "en": "FlowNote", "ja": "FlowNote" },
+    { "source": "스마트 정리", "en": "Smart Organize", "ja": "スマート整理" },
+    { "source": "작업 공간", "en": "workspace", "ja": "ワークスペース" },
+    { "source": "무료 체험", "en": "free trial", "ja": "無料トライアル" },
+    { "source": "결제 주기", "en": "billing cycle", "ja": "請求サイクル" },
+    { "source": "팀 관리자", "en": "team admin", "ja": "チーム管理者" }
+  ]
+}

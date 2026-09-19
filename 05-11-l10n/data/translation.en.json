@@ -1,0 +1,10 @@
+{
+  "pricing.hero.title": "Bring every scattered note together with FlowNote",
+  "pricing.hero.subtitle": "Pick one of {plan_count} plans and start with a 14-day free trial.",
+  "pricing.card.pro.name": "FlowNote Pro",
+  "pricing.card.pro.desc": "Includes Smart Organize and five workspaces.",
+  "pricing.card.team.desc": "With FlowNote Team, the team admin manages the billing cycle for everyone.",
+  "pricing.cta.trial": "Start your free trial, {{user_name}}",
+  "pricing.footer.note": "See https://www.example.com/pricing?utm_source=newsletter for details.",
+  "pricing.footer.contact": "Contact: support@example.com"
+}
