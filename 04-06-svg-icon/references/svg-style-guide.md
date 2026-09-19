@@ -21,5 +21,5 @@
 
 ## 4. 접근성 (Accessibility)
 - 모든 SVG 요소에는 `role="img"`를 추가합니다.
-- 색상을 바꿀 때는 [04-4의 contrast.py](../../04-4-a11y-review/scripts/contrast.py)로 3:1 충족을 확인합니다.
+- 색상을 바꿀 때는 [04-04의 contrast.py](../../04-04-a11y-review/scripts/contrast.py)로 3:1 충족을 확인합니다.
 - `<svg>` 태그 내부에 `<title>아이콘 이름</title>`을 포함하여 스크린 리더에서 읽을 수 있게 합니다.
