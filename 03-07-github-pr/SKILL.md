@@ -1,6 +1,9 @@
 ---
 name: github-pr-writer
 description: 변경 사항(git diff, 커밋 로그)을 저장소의 PR 템플릿에 맞춰 PR 본문 초안으로 정리합니다. "이 브랜치 PR 써줘", "방금 커밋한 내용으로 PR 초안 만들어줘", "git diff 요약해서 PR 템플릿 채워줘" 같은 요청에서 트리거됩니다. 코드 리뷰나 커밋 메시지 작성에는 사용하지 않습니다.
+allowed-tools:
+  - Bash        # git diff·git log로 변경 사항 확인 (읽기 전용, PR 생성은 하지 않음)
+  - Read        # 저장소의 PR 템플릿 읽기
 ---
 
 # PR 초안 작성

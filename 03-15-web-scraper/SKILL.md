@@ -1,6 +1,10 @@
 ---
 name: web-scraper
 description: JavaScript로 렌더링되는 웹 페이지에서 목록·표 같은 반복 항목을 Playwright로 추출해 JSON으로 저장합니다. 수집 전에 robots.txt를 스크립트로 확인하고, 막혀 있으면 멈춥니다. "이 페이지에서 목록 긁어서 JSON으로 저장해줘", "JS로 그려지는 사이트라 requests로는 안 나와, Playwright로 뽑아줘", "이 사이트 명언이랑 저자 전부 모아줘" 같은 요청에서 트리거됩니다. 공식 API가 있는 서비스의 클라이언트 작성이나 로그인이 필요한 페이지에는 사용하지 않습니다.
+allowed-tools:
+  - Bash        # scripts/scrape.py 실행 (--check-only 포함)
+  - Read        # references/playwright-setup.md의 셀렉터 찾기 순서 확인
+  - AskUserQuestion  # 2쪽 이상 수집 전 쪽 수와 간격 확인
 ---
 
 # 동적 웹 페이지 데이터 수집
