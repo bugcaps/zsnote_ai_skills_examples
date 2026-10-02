@@ -1,6 +1,6 @@
 ---
 name: mermaid-diagram-generator
-description: 시스템 아키텍처나 사용자 플로우에 대한 설명을 입력하면, 렌더링 가능한 Mermaid 다이어그램(순서도, 시퀀스 등) 코드로 변환합니다. (예: "로그인 플로우 그려줘", "서버 아키텍처 그려줘")
+description: '시스템 아키텍처나 사용자 플로우에 대한 설명을 입력하면, 렌더링 가능한 Mermaid 다이어그램(순서도, 시퀀스 등) 코드로 변환합니다. (예: "로그인 플로우 그려줘", "서버 아키텍처 그려줘")'
 ---
 
 # Mermaid Diagram Generator
