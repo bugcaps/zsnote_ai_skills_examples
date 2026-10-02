@@ -2,8 +2,6 @@
 name: add-missing-imports
 description: 사용된 함수/클래스의 import 문 누락 여부를 확인하고 자동으로 추가합니다. "import 빠진 거 있나?", "이 함수를 import 해야 하나?" 같은 요청에서 트리거됩니다.
 allowed-tools:
-  - Read        # 파일 읽기 (어떤 함수 사용하는지 확인)
-  - Grep        # import 문 검색 (이미 있는 import 확인)
   - Edit        # import 문 추가
 ---
 

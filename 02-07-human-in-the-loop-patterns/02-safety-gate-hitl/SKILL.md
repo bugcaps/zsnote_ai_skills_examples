@@ -1,10 +1,6 @@
 ---
 name: safety-gate-hitl
 description: 위험한 작업 전에 최종 확인을 받습니다. "프로덕션 배포", "데이터베이스 마이그레이션", "사용자 데이터 삭제" 같은 요청에서 필수입니다.
-allowed-tools:
-  - Bash        # 사전 검증 (dry-run, 테스트)
-  - Read        # 영향 범위 확인
-  - AskUserQuestion  # "정말 진행할까?" 최종 승인
 ---
 
 # safety-gate-hitl (안전장치형 HITL)

@@ -1,10 +1,6 @@
 ---
 name: multi-option-decision
 description: 여러 설계안을 분석 후 사용자가 선택합니다. "설계 방법 결정", "기술 스택 선택", "리팩토링 vs 신규작성" 같은 요청에서 트리거됩니다.
-allowed-tools:
-  - Read        # 현재 상황 분석
-  - Artifact    # 선택지 시각화
-  - AskUserQuestion  # 사용자 선택 요청
 ---
 
 # multi-option-decision (의사결정형 HITL)

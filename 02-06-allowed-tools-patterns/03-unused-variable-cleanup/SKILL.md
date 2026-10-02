@@ -2,8 +2,6 @@
 name: unused-variable-cleanup
 description: 선언되었지만 사용되지 않는 변수, 함수, import를 탐지하고 제거합니다. "미사용 코드 정리", "번들 사이즈 줄이기", "데드 코드 제거" 같은 요청에서 트리거됩니다.
 allowed-tools:
-  - Grep        # 변수 정의 및 사용 검색
-  - Read        # 변수 사용 여부 확인
   - Edit        # 미사용 변수 제거
 ---
 

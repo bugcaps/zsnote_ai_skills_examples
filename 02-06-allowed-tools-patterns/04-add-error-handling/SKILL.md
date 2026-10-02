@@ -2,8 +2,6 @@
 name: add-error-handling
 description: await, fetch 등 비동기 작업의 에러 처리 누락 여부를 확인하고 try-catch를 추가합니다. "에러 처리 빠진 곳 있나?", "API 호출 안전성", "Promise 에러 처리" 같은 요청에서 트리거됩니다.
 allowed-tools:
-  - Grep        # "await" 또는 ".catch()" 검색
-  - Read        # try-catch 감싸기 여부 확인
   - Edit        # try-catch 추가
 ---
 

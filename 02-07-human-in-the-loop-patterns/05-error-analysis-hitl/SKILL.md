@@ -1,11 +1,6 @@
 ---
 name: error-analysis-hitl
 description: 자동 해결 불가능한 오류를 분석하고 사용자에게 원인과 해결 경로를 제시합니다. "테스트 실패 원인 분석", "빌드 에러", "배포 실패" 같은 상황에서 사용합니다.
-allowed-tools:
-  - Bash        # 오류 재현 및 로그 분석
-  - Grep        # 오류 메시지 추적
-  - Read        # 코드 검토
-  - AskUserQuestion  # 해결 경로 선택
 ---
 
 # error-analysis-hitl (오류 분석형 HITL)

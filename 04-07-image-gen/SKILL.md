@@ -2,8 +2,7 @@
 name: image-prompt-generate
 description: 짧은 한국어 요청을 이미지 생성 AI용 영문 프롬프트로 확장하고, 확인을 받은 뒤 스크립트로 이미지를 생성합니다. "우주복 입은 고양이 그려줘", "블로그 썸네일용 이미지 만들어줘", "이 장면 DALL-E 프롬프트로 바꿔줘" 같은 요청에서 트리거됩니다. 아이콘·로고처럼 벡터로 만들어야 하는 것에는 사용하지 않습니다.
 allowed-tools:
-  - Bash        # scripts/generate_image.py 실행 (--dry-run으로 비용 먼저 확인)
-  - AskUserQuestion  # 프롬프트와 예상 비용을 보여주고 생성 승낙 받기
+  - Bash(python ${CLAUDE_SKILL_DIR}/scripts/generate_image.py * --dry-run)  # 비용 확인만 확인 없이 실행. 실제 생성은 매번 묻습니다
 ---
 
 # 프롬프트 기반 이미지 생성

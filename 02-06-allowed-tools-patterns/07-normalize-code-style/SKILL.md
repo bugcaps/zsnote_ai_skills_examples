@@ -2,10 +2,9 @@
 name: normalize-code-style
 description: 코드 포맷팅 및 스타일 일관성을 확보합니다. "따옴표 통일", "들여쓰기 정렬", "Prettier 적용", "세미콜론 규칙" 같은 요청에서 트리거됩니다.
 allowed-tools:
-  - Grep        # 일관성 없는 패턴 검색 ("" vs '', 들여쓰기)
-  - Read        # 현재 스타일 확인
-  - Edit        # 스타일 통일
-  - Bash        # prettier 또는 eslint --fix 자동화
+  - Edit                      # 포매터가 못 고친 부분 수동 조정
+  - Bash(npx prettier --write *)  # 포매터 실행
+  - Bash(npx eslint --fix *)      # 린터 자동 수정
 ---
 
 # normalize-code-style (스타일 통일)

@@ -2,8 +2,6 @@
 name: add-type-annotations
 description: JavaScript 코드에 TypeScript 타입 주석을 추가합니다. "함수에 타입 추가", "JS → TS 마이그레이션", "타입 안정성 확보" 같은 요청에서 트리거됩니다.
 allowed-tools:
-  - Read        # 함수 및 변수 읽기
-  - Grep        # 타입 없는 매개변수 검색
   - Edit        # 타입 주석 추가
 ---
 

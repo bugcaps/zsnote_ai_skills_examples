@@ -1,11 +1,6 @@
 ---
 name: hitl-design-patterns
 description: 자동화와 인간 검증을 조합하는 5가지 휴먼-인-더-루프 패턴을 제공합니다. "이 작업은 자동으로 할까, 확인받을까?", "여러 선택지가 있는데" 같은 설계 판단에서 사용됩니다.
-allowed-tools:
-  - Read        # 상황 분석
-  - Artifact    # 선택지/데이터 시각화
-  - AskUserQuestion  # 사용자 개입
-  - Bash        # 사전 검증 (dry-run)
 ---
 
 # 5가지 휴먼-인-더-루프(HITL) 패턴

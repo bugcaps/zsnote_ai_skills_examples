@@ -1,9 +1,6 @@
 ---
 name: generate-api-client
 description: 외부 API 명세서(OpenAPI 등)를 바탕으로 타입 안전한 API 클라이언트 코드를 생성합니다. "새 API 클라이언트 만들어줘", "결제 API 연동 코드 짜줘", "Swagger 명세로 갱신해" 같은 발화에서 트리거됩니다.
-allowed-tools:
-  - Read        # API 명세서와 기존 클라이언트 파일 1개 읽기
-  - Write       # 생성한 클라이언트 코드 저장
 ---
 
 # 외부 API 연동 클라이언트 생성

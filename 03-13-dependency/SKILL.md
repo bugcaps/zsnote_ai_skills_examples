@@ -2,9 +2,11 @@
 name: resolve-dependency-conflict
 description: 패키지 의존성 충돌(npm ERESOLVE, pip ResolutionImpossible 등)의 원인을 버전 범위 관점에서 분석하고 우회 옵션 없이 해결합니다. "의존성 충돌 났어", "npm install 하면 ERESOLVE 에러 나", "React 18로 올렸더니 설치가 안 돼" 같은 요청에서 트리거됩니다. 단순한 패키지 설치·업데이트 요청에는 사용하지 않습니다.
 allowed-tools:
-  - Bash        # npm ls·npm view·pip check로 요구 버전 범위 조회
-  - Edit        # 버전 수정, overrides·resolutions 추가
-  - AskUserQuestion  # 교집합이 없을 때 대안 확인, 메이저 버전 상향 승낙
+  - Bash(npm ls *)              # 충돌 패키지를 요구하는 부모 패키지 확인
+  - Bash(npm view *)            # 각 부모가 요구하는 버전 범위 조회
+  - Bash(pip check)             # 파이썬 의존성 충돌 확인
+  - Bash(pip show *)            # 설치된 파이썬 패키지의 요구 조건 확인
+  - Bash(pip index versions *)  # 받을 수 있는 버전 목록 조회
 ---
 
 # 패키지 의존성 충돌 해결

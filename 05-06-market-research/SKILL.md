@@ -2,7 +2,7 @@
 name: market-research
 description: 특정 키워드나 경쟁사를 기반으로 시장 동향과 경쟁사 정보를 조사하여 마크다운 리포트로 요약합니다.
 allowed-tools:
-  - Bash        # scripts/search_market.py 실행 (검색은 스크립트가 맡음)
+  - Bash(python ${CLAUDE_SKILL_DIR}/scripts/search_market.py *)  # 검색 스크립트 실행 (다른 셸 명령은 매번 묻습니다)
 ---
 
 # Instructions

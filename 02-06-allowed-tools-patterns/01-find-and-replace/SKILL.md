@@ -2,9 +2,7 @@
 name: find-and-replace
 description: 코드 내 특정 문자열을 일괄 변경합니다. "함수명 A를 B로 바꿔줄래?", "변수명 변경", "console.log를 logger로" 같은 요청에서 트리거됩니다.
 allowed-tools:
-  - Grep        # 찾을 문자열 검색 (몇 개 있는지 확인)
-  - Edit        # 파일 수정 (replace_all로 일괄 변경)
-  - Bash        # git diff로 변경 전후 비교
+  - Edit        # 여러 파일의 일괄 변경 (git diff로 되돌릴 수 있으므로 매번 묻지 않음)
 ---
 
 # find-and-replace (일괄 찾기 및 바꾸기)

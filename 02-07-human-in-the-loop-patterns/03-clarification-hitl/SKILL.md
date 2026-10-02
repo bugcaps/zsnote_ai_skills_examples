@@ -1,9 +1,6 @@
 ---
 name: clarification-hitl
 description: 불명확한 요구사항을 사용자에게 질문해 명확히 합니다. "이게 뭔 말인지 잘 모르겠는데", "여러 해석이 가능한데", "확실하지 않아서" 같은 상황에서 사용합니다.
-allowed-tools:
-  - Read        # 현재 상황 분석
-  - AskUserQuestion  # "이렇게 이해하는 게 맞나?" 확인
 ---
 
 # clarification-hitl (불확실성 해소형 HITL)

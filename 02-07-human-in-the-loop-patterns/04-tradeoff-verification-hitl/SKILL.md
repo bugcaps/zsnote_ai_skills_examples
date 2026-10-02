@@ -1,10 +1,6 @@
 ---
 name: tradeoff-verification-hitl
 description: 성능 vs 복잡도처럼 상충하는 트레이드오프를 사용자에게 제시합니다. "최적화할 때", "기술 선택", "기능 추가 vs 성능" 같은 상황에서 사용합니다.
-allowed-tools:
-  - Bash        # 성능/복잡도 측정
-  - Artifact    # 트레이드오프 시각화
-  - AskUserQuestion  # 사용자 선택
 ---
 
 # tradeoff-verification-hitl (트레이드오프 검증형 HITL)

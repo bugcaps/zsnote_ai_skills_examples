@@ -2,8 +2,7 @@
 name: file-organizer
 description: 어질러진 폴더의 파일을 확장자별 또는 날짜별 폴더로 옮기고, 어느 파일이 어디에서 어디로 갔는지 이동 로그를 남겨 언제든 통째로 되돌립니다. "다운로드 폴더 좀 정리해 줘", "사진 날짜별로 묶어 줘", "이거 다시 원래대로 돌릴 수 있어?" 같은 요청에서 트리거됩니다. 바탕화면·사진첩·내려받기 폴더 정리와, 정리한 것을 취소하는 요청에 씁니다. 파일을 지우거나 중복본을 없애지 않고, 클라우드 동기화·이름 일괄 변경·폴더 안 문서의 내용 요약에는 쓰지 않습니다.
 allowed-tools:
-  - Bash        # scripts/organize_files.py 실행 (미리보기 → --apply → --undo)
-  - AskUserQuestion  # 대상 폴더 경로와 되돌릴 로그 확인
+  - Bash(python ${CLAUDE_SKILL_DIR}/scripts/organize_files.py *)  # 미리보기·--apply·--undo. 이동 로그가 남는 이 스크립트만 확인 없이 실행
 ---
 
 # 폴더 정리와 되돌리기
