@@ -1,0 +1,12 @@
+[2026-03-02 01:40:00] [INFO] SettlementBatch - daily settlement job started (chunkSize=5000)
+[2026-03-02 01:45:12] [INFO] POST /payments ok orderId=55011 elapsed=120ms
+[2026-03-02 01:52:10] [WARN] HikariPool-1 - Connection pool usage 82% (41/50)
+[2026-03-02 01:55:03] [INFO] POST /payments ok orderId=55090 elapsed=870ms
+[2026-03-02 01:58:30] [WARN] HikariPool-1 - Connection pool usage 100% (50/50), 12 threads waiting
+[2026-03-02 01:59:00] [ERROR] HikariPool-1 - Connection is not available, request timed out after 30000ms
+	at com.zaxxer.hikari.pool.HikariPool.createTimeoutException(HikariPool.java:696)
+[2026-03-02 02:00:15] [ERROR] POST /payments failed: upstream timeout after 30000ms orderId=55102
+[2026-03-02 02:00:16] [ERROR] POST /payments failed: upstream timeout after 30000ms orderId=55103
+[2026-03-02 02:00:21] [INFO] GET /health 200 OK db=UP
+[2026-03-02 02:00:40] [ERROR] POST /payments failed: upstream timeout after 30000ms orderId=55107
+[2026-03-02 02:05:00] [INFO] SettlementBatch - processed 120000 rows
