@@ -1,6 +1,6 @@
 ---
 name: log-rca
-description: 지정한 로그 파일에서 장애 타임라인을 스크립트로 뽑고, 로그에 근거한 근본 원인 분석(RCA) 결과만 돌려줍니다. 로그 원문은 별도 서브에이전트가 읽으므로 본 대화에 쌓이지 않습니다. "/log-rca payment.log"처럼 로그 파일 경로와 함께 부릅니다. 실시간 모니터링이나 알림 설정에는 사용하지 않습니다.
+description: 지정한 로그 파일에서 장애 타임라인을 스크립트로 추출하고, 로그에 근거한 근본 원인 분석(RCA) 결과만 반환합니다. 로그 원문은 별도 서브에이전트가 읽으므로 본 대화에 쌓이지 않습니다. "/log-rca payment.log"처럼 로그 파일 경로와 함께 부릅니다. 실시간 모니터링이나 알림 설정에는 사용하지 않습니다.
 context: fork
 agent: general-purpose
 background: false
@@ -16,11 +16,11 @@ allowed-tools:
 
 ## 작업 순서
 
-1. 인자로 받은 로그 경로가 없거나 파일이 없으면, 분석하지 않고 보고 양식의 `상태: 확인 필요`로 그 사실만 돌려줍니다.
+1. 인자로 받은 로그 경로가 없거나 파일이 없으면, 분석하지 않고 보고 양식의 `상태: 확인 필요`로 그 사실만 반환합니다.
 2. `python ${CLAUDE_SKILL_DIR}/scripts/parse_logs.py <로그> --level ERROR`로 첫 ERROR 시각을 찾습니다.
-3. `python ${CLAUDE_SKILL_DIR}/scripts/parse_logs.py <로그> --around "<첫 ERROR 시각>" --minutes 10`으로 타임라인을 뽑습니다. 로그 원문은 읽지 않습니다.
+3. `python ${CLAUDE_SKILL_DIR}/scripts/parse_logs.py <로그> --around "<첫 ERROR 시각>" --minutes 10`으로 타임라인을 추출합니다. 로그 원문은 읽지 않습니다.
 4. 출력의 `최초 이벤트`가 첫 ERROR보다 앞선 WARN인지 확인하고, 가설 2개 이상을 타임라인의 줄로 지지·반박합니다.
-5. 아래 보고 양식으로만 돌려줍니다.
+5. 아래 보고 양식으로만 반환합니다.
 
 ## 핵심 규약
 
@@ -44,4 +44,4 @@ allowed-tools:
 
 - [ ] 스크립트를 두 번(첫 ERROR 찾기, 타임라인) 실행했다
 - [ ] 보고에 인용한 줄이 모두 스크립트 출력에 있다
-- [ ] 보고 양식의 여섯 항목만 돌려줬다
+- [ ] 보고 양식의 여섯 항목만 반환했다

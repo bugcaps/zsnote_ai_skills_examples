@@ -1,6 +1,6 @@
 ---
 name: action-tracker
-description: 회의록 요약 스킬(meeting-notes-summarizer)이 만든 회의록의 액션 아이템을, 여러 회의에 걸친 할 일 목록 파일 하나에 이어 붙여 관리합니다. "방금 정리한 회의록 할 일 목록에 넣어 줘", "회의록 액션 아이템 누적해 줘", "할 일 목록에 이번 회의 거 추가해 줘" 같은 요청에서 트리거됩니다. 회의 기록을 직접 요약하거나 액션을 새로 뽑지 않습니다. 그런 요청은 meeting-notes-summarizer가 맡습니다.
+description: 회의록 요약 스킬(meeting-notes-summarizer)이 만든 회의록의 액션 아이템을, 여러 회의에 걸친 할 일 목록 파일 하나에 이어 붙여 관리합니다. "방금 정리한 회의록 할 일 목록에 넣어 줘", "회의록 액션 아이템 누적해 줘", "할 일 목록에 이번 회의 거 추가해 줘" 같은 요청에서 트리거됩니다. 회의 기록을 직접 요약하거나 액션을 새로 추출하지 않습니다. 그런 요청은 meeting-notes-summarizer가 맡습니다.
 allowed-tools:
   - Bash(python ${CLAUDE_SKILL_DIR}/scripts/merge_actions.py *)  # 미리보기·--apply. 할일목록에 쓰는 일은 이 스크립트만 합니다
 ---

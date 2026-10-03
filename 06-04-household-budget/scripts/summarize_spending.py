@@ -52,7 +52,7 @@ def normalize(header):
 
 
 def match_columns(header, overrides):
-    """열 이름을 역할에 맞춥니다. 맞추지 못한 역할 목록을 함께 돌려줍니다."""
+    """열 이름을 역할에 맞춥니다. 맞추지 못한 역할 목록을 함께 반환합니다."""
     normalized = {normalize(name): name for name in header}
     matched, missing = {}, []
     for role, candidates in COLUMN_CANDIDATES.items():
@@ -155,7 +155,7 @@ def fail(*lines):
 
 
 def read_rows(path):
-    """utf-8 로 먼저 읽고, 실패하면 cp949 로 다시 읽습니다. 어떤 인코딩이었는지 함께 돌려줍니다."""
+    """utf-8 로 먼저 읽고, 실패하면 cp949 로 다시 읽습니다. 어떤 인코딩이었는지 함께 반환합니다."""
     for encoding in ("utf-8-sig", "cp949"):
         try:
             with open(path, encoding=encoding, newline="") as f:
@@ -183,7 +183,7 @@ def pad(text, width, right=False):
 def main():
     for stream in (sys.stdout, sys.stderr):  # Windows 콘솔에서 한글이 깨지지 않게 고정
         stream.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="명세서 CSV에서 범주별 합계만 뽑습니다. 개별 거래는 출력하지 않습니다.")
+    parser = argparse.ArgumentParser(description="명세서 CSV에서 범주별 합계만 추출합니다. 개별 거래는 출력하지 않습니다.")
     parser.add_argument("csv_path", help="카드사·은행에서 내려받은 명세서 CSV 경로")
     parser.add_argument("--month", help="YYYY-MM 으로 한 달만 집계합니다")
     parser.add_argument("--date-col", help="날짜 열 이름을 직접 지정합니다")

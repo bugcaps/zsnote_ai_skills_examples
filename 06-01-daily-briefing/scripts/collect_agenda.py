@@ -3,7 +3,7 @@
 
 맨 먼저 시스템 시계와 시간대를 읽어 기준 시각 한 줄을 출력합니다.
 에이전트가 오늘 날짜를 스스로 짐작하지 않게 하는 것이 이 스크립트의 첫 번째 목적입니다.
---ics 를 주면 내보낸 캘린더 파일에서 대상 날짜의 일정을 뽑습니다.
+--ics 를 주면 내보낸 캘린더 파일에서 대상 날짜의 일정을 추출합니다.
 
 사용법:
     python collect_agenda.py
@@ -114,7 +114,7 @@ def resolve_date(text, today):
 def main():
     for stream in (sys.stdout, sys.stderr):  # Windows 콘솔에서 한글이 깨지지 않게 고정
         stream.reconfigure(encoding="utf-8")
-    parser = argparse.ArgumentParser(description="기준 시각을 출력하고, .ics 파일에서 대상 날짜의 일정을 뽑습니다.")
+    parser = argparse.ArgumentParser(description="기준 시각을 출력하고, .ics 파일에서 대상 날짜의 일정을 추출합니다.")
     parser.add_argument("--ics", help="내보낸 캘린더 파일 경로. 없으면 기준 시각만 출력합니다")
     parser.add_argument("--date", default="today", help="대상 날짜: today | tomorrow | YYYY-MM-DD (기본 today)")
     args = parser.parse_args()
